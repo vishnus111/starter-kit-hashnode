@@ -86,11 +86,20 @@ const config = {
 				source: '/api/collect',
 				destination: `${ADVANCED_ANALYTICS_BASE_URL}/api/collect`,
 			},
+			{
+				source: "/blog",
+				destination: "https://starter-kit-hashnode-2apos7li8-vishnus111.vercel.app/blog", 
+			  },
+			  {
+				source: "/blog/:path*",
+				destination: "https://starter-kit-hashnode-2apos7li8-vishnus111.vercel.app/blog/:path*",
+			  }
 		];
 	},
 	async redirects() {
 		return await getRedirectionRules();
 	},
+	
 };
 
 module.exports = config;
